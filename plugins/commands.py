@@ -148,8 +148,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🎥 ᴍᴏᴠɪᴇ ʙᴏᴛ 🤖', url="https://t.me/Thunnder_Bot"),
-                          InlineKeyboardButton('🍿ᴜᴘᴅᴀᴛᴇꜱ🎥', url="https://t.me/+DxQHbiEdhQ1hY2E1")
+                          InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇꜱ 🎥', url="https://t.me/MS_Movvies")
                          ]]
                     )
                 )
@@ -164,8 +163,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🎥 ᴍᴏᴠɪᴇ ʙᴏᴛ 🤖', url="https://t.me/Thunnder_Bot"),
-                          InlineKeyboardButton('🍿ᴜᴘᴅᴀᴛᴇꜱ🎥', url="https://t.me/+DxQHbiEdhQ1hY2E1")
+                          InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇꜱ 🎥', url="https://t.me/MS_Movvies")
                          ]]
                     )
                 )
@@ -326,7 +324,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🎥 ᴍᴏᴠɪᴇ ʙᴏᴛ 🤖', url="https://t.me/Thunnder_Bot")
+                      InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇꜱ 🎥', url="https://t.me/MS_Movvies")
                      ]]
                 )
             )
@@ -381,8 +379,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🎥 ᴍᴏᴠɪᴇ ʙᴏᴛ 🤖', url="https://t.me/Thunnder_Bot"),
-                      InlineKeyboardButton('🍿ᴜᴘᴅᴀᴛᴇꜱ🎥', url="https://t.me/+DxQHbiEdhQ1hY2E1")
+                      InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇꜱ 🎥', url="https://t.me/MS_Movvies")
                      ]]
                 )
             )
@@ -436,8 +433,7 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              InlineKeyboardButton('🎥 ᴍᴏᴠɪᴇ ʙᴏᴛ 🤖', url="https://t.me/Thunnder_Bot"),
-              InlineKeyboardButton('🍿ᴜᴘᴅᴀᴛᴇꜱ🎥', url="https://t.me/+DxQHbiEdhQ1hY2E1")
+              InlineKeyboardButton('🍿ᴜᴘᴅᴀᴛᴇꜱ🎥', url="https://t.me/MS_Movvies")
              ]]
         )
     )
