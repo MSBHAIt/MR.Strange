@@ -41,15 +41,15 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-                    InlineKeyboardButton('⇋ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⇋', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('✚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('✦ ᴏᴡɴᴇʀ ✦', callback_data='owner_hun'),
-                    InlineKeyboardButton('🌿 ꜱᴜᴘᴘᴏʀᴛ', callback_data='oye_support')
+                    InlineKeyboardButton('✖ ꜱᴜᴘᴘᴏʀᴛ ✖', callback_data='oye_support')
                 ],[
-                    InlineKeyboardButton('💠 ʜᴇʟᴘ 💠', callback_data='help'),
+                    InlineKeyboardButton('✖ ʜᴇʟᴘ ✖', callback_data='help'),
                     InlineKeyboardButton('✦ ᴀʙᴏᴜᴛ ✦', callback_data='about')
                 ],[
-                    InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data='shortlink_info')
+                    InlineKeyboardButton('◉ ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ ◉', callback_data='shortlink_info')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -89,15 +89,15 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-                    InlineKeyboardButton('⇋ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⇋', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('✚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('✦ ᴏᴡɴᴇʀ ✦', callback_data='owner_hun'),
-                    InlineKeyboardButton('🌿 ꜱᴜᴘᴘᴏʀᴛ', callback_data='oye_support')
+                    InlineKeyboardButton('✖ ꜱᴜᴘᴘᴏʀᴛ ✖', callback_data='oye_support')
                 ],[
-                    InlineKeyboardButton('💠 ʜᴇʟᴘ 💠', callback_data='help'),
+                    InlineKeyboardButton('✖ ʜᴇʟᴘ ✖', callback_data='help'),
                     InlineKeyboardButton('✦ ᴀʙᴏᴜᴛ ✦', callback_data='about')
                 ],[
-                    InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 💸', callback_data='shortlink_info')
+                    InlineKeyboardButton('◉ ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ ◉', callback_data='shortlink_info')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
@@ -413,7 +413,7 @@ async def start(client, message):
             logger.exception(e)
             f_caption=f_caption
     if f_caption is None:
-        f_caption = f"Movvie {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
+        f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
     if not await check_verification(client, message.from_user.id) and VERIFY == True:
         btn = [[
             InlineKeyboardButton("✅ ᴠᴇʀɪғʏ ✅", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
@@ -921,7 +921,7 @@ async def deletemultiplefiles(bot, message):
         parse_mode=enums.ParseMode.HTML
     )
 
-@Client.on_message(filters.command("shortner"))
+@Client.on_message(filters.command("set_shortner"))
 async def shortlink(bot, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
@@ -953,7 +953,7 @@ async def shortlink(bot, message):
     await save_group_settings(grpid, 'is_shortlink', True)
     await reply.edit_text(f"<b>Successfully added shortlink API for {title}.\n\nCurrent Shortlink Website: <code>{shortlink_url}</code>\nCurrent API: <code>{api}</code></b>")
     
-@Client.on_message(filters.command("shortneroff") & filters.user(ADMINS))
+@Client.on_message(filters.command("off_shortner") & filters.user(ADMINS))
 async def offshortlink(bot, message):
     chat_type = message.chat.type
     if chat_type == enums.ChatType.PRIVATE:
@@ -967,7 +967,7 @@ async def offshortlink(bot, message):
     # ENABLE_SHORTLINK = False
     return await message.reply_text("Successfully disabled shortlink")
     
-@Client.on_message(filters.command("setshortlinkon") & filters.user(ADMINS))
+@Client.on_message(filters.command("shortner_on") & filters.user(ADMINS))
 async def onshortlink(bot, message):
     chat_type = message.chat.type
     if chat_type == enums.ChatType.PRIVATE:
@@ -1026,7 +1026,7 @@ async def showshortlink(bot, message):
             return await message.reply_text("Shortener url and Tutorial Link Not Connected. Check this commands, /shortlink and /set_tutorial")
 
 
-@Client.on_message(filters.command("your_vtutorial"))
+@Client.on_message(filters.command("set_tutorial"))
 async def settutorial(bot, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
