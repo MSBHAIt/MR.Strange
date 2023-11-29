@@ -1545,9 +1545,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "oye_support":
         buttons = [[
-            InlineKeyboardButton('🔮ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ🔮', url="https://t.me/Thunnder_Bot")
+            InlineKeyboardButton('🔮ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ🔮', url="https://t.me/MS_Movvies")
         ],[
-            InlineKeyboardButton('👥 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 👥', url="https://t.me/+z2b3yBUUMf80NWVl")
+            InlineKeyboardButton('👥 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 👥', url="https://t.me/+U3Y_jbbzAh0yZDk1")
         ],[
             InlineKeyboardButton('❰ ʙᴀᴄᴋ', callback_data='start'),
             InlineKeyboardButton('❌ ᴄʟᴏꜱᴇ ❌', callback_data='close_data')
