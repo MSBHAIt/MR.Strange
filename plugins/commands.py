@@ -23,7 +23,7 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('⇋ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⇌', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('ℹ️ ʀᴜʟᴇꜱ 🌠', url=GRP_LNK),
                     InlineKeyboardButton('🎥🍿 ᴍᴏᴠɪᴇ🍿🎥', url=CHNL_LNK)
@@ -41,10 +41,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-                    InlineKeyboardButton('✚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                ],[
-                    InlineKeyboardButton('✦ ᴏᴡɴᴇʀ ✦', callback_data='owner_hun'),
-                    InlineKeyboardButton('✦ ꜱᴜᴘᴘᴏʀᴛ ✦', callback_data='oye_support')
+                    InlineKeyboardButton('⇌ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⇌', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('✦ ʜᴇʟᴘ ✦', callback_data='help'),
                     InlineKeyboardButton('✦ ᴀʙᴏᴜᴛ ✦', callback_data='about')
@@ -89,10 +86,7 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-                    InlineKeyboardButton('✚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                ],[
-                    InlineKeyboardButton('✦ ᴏᴡɴᴇʀ ✦', callback_data='owner_hun'),
-                    InlineKeyboardButton('✦ ꜱᴜᴘᴘᴏʀᴛ ✦', callback_data='oye_support')
+                    InlineKeyboardButton('⇌ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⇌', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('✦ ʜᴇʟᴘ ✦', callback_data='help'),
                     InlineKeyboardButton('✦ ᴀʙᴏᴜᴛ ✦', callback_data='about')
@@ -148,7 +142,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇꜱ 🎥', url="https://t.me/MS_Movvies")
+                          InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇꜱ 🎥', url="https://t.me/MS_Strange_Bot")
                          ]]
                     )
                 )
@@ -163,7 +157,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇꜱ 🎥', url="https://t.me/MS_Movvies")
+                          InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇꜱ 🎥', url="https://t.me/MS_Strange_Bot")
                          ]]
                     )
                 )
@@ -250,7 +244,7 @@ async def start(client, message):
             g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=allfiles_{file_id}", True)
         else:
             g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=allfiles_{file_id}", False)
-        k = await client.send_message(chat_id=message.from_user.id,text=f"<b>Get All Files in a Single Click!!!\n\n📂 ʟɪɴᴋ ➠ : {g}\n\n<i>Note: ⚠️ ᴀɢᴀʀ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ᴅᴇʟᴇᴛᴇ ɪɴ 10 ᴍɪɴᴜᴛᴇꜱ ꜱᴏ ꜱᴀᴠᴇ ᴛʜᴇ ʟɪɴᴋ</i></b>", reply_markup=InlineKeyboardMarkup(
+        k = await client.send_message(chat_id=message.from_user.id,text=f"<b>Get All Files in a Single Click!!!\n\n📂 ʟɪɴᴋ ➠ : {g}\n\n<i>Note: ⚠️ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ᴅᴇʟᴇᴛᴇ ɪɴ 10 ᴍɪɴᴜᴛᴇꜱ ꜱᴏ ꜱᴀᴠᴇ ᴛʜᴇ ʟɪɴᴋ</i></b>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton('📁 ᴍᴏᴠɪᴇ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📁', url=g)
@@ -324,7 +318,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇꜱ 🎥', url="https://t.me/MS_Movvies")
+                      InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇꜱ 🎥', url="https://t.me/MS_Strange_Bot")
                      ]]
                 )
             )
@@ -343,7 +337,7 @@ async def start(client, message):
             files_ = await get_file_details(file_id)
             files = files_[0]
             g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-            k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: ⚠️ ᴀɢᴀ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ᴅᴇʟᴇᴛᴇ ɪɴ 10 ᴍɪɴᴜᴛᴇꜱ ꜱᴏ ꜱᴀᴠᴇ ᴛʜᴇ ʟɪɴᴋ</i></b>", reply_markup=InlineKeyboardMarkup(
+            k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: ⚠️ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ᴅᴇʟᴇᴛᴇ ɪɴ 10 ᴍɪɴᴜᴛᴇꜱ ꜱᴏ ꜱᴀᴠᴇ ᴛʜᴇ ʟɪɴᴋ</i></b>", reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton('📂 ᴍᴏᴠɪᴇ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📂', url=g)
@@ -379,7 +373,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇꜱ 🎥', url="https://t.me/MS_Movvies")
+                      InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇꜱ 🎥', url="https://t.me/MS_Strange_Bot")
                      ]]
                 )
             )
@@ -433,7 +427,7 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇꜱ 🎥', url="https://t.me/MS_Movvies")
+              InlineKeyboardButton('🍿 ᴜᴘᴅᴀᴛᴇꜱ 🎥', url="https://t.me/MS_Strange_Bot")
              ]]
         )
     )
